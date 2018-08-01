@@ -17,17 +17,17 @@ $(document).ready(function(){
 
         $("details").not(this).removeAttr("open");
     });
-    
+
     $("summary").click(function(){
 
         $(".hidden").removeClass("show"); //to show 'query sent'
 
     });
-    
-    
+
+
     $(".show-year-end").click(function(){
 
-        $(".hidden-cell").addClass("show1"); 
+        $(".hidden-cell").addClass("show1");
 
         $(".hidden-year-end").show();
 
@@ -38,7 +38,7 @@ $(document).ready(function(){
 
     $(".hide-year-end").click(function(){
 
-        $(".hidden-cell").removeClass("show1"); 
+        $(".hidden-cell").removeClass("show1");
 
         $(".hidden-year-end").hide();
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
 
 
     });
-    
+
     // $("summary").click(function(){
 
     //     $(".hidden").removeClass("show"); //to show 'query sent'
@@ -55,8 +55,8 @@ $(document).ready(function(){
     // });
 
 
-    
-    
+
+
     // $(window).scroll(function(){
     //   if($(window).scrollTop() + 100 > $(window).height() ){
 
@@ -65,43 +65,43 @@ $(document).ready(function(){
     //       }
     //     else {
     //         $("#js-back-to-content").hide();
-    //     }  
+    //     }
     // });
 
     $("#funding-title").click(function(){
 
-        $(".hidden").toggleClass("show-table"); 
+        $(".hidden").toggleClass("show-table");
 
-        $(".down-arrow-funding").toggleClass("up-arrow-funding"); 
+        $(".down-arrow-funding").toggleClass("up-arrow-funding");
 
         $("#total-claims-hide").toggle();
 
     });
 
-    
+
     $("#funding-title-2").click(function(){
 
-        $(".hidden-2").toggleClass("show-table-2"); 
+        $(".hidden-2").toggleClass("show-table-2");
 
         $(".down-arrow-2").toggleClass("up-arrow-new-2");
 
         $("#total-claims-hide-2").toggle();
     });
 
-   
+
     $("#funding-title-3").click(function(){
 
-        $(".hidden-3").toggleClass("show-table-3"); 
+        $(".hidden-3").toggleClass("show-table-3");
 
         $(".down-arrow-3").toggleClass("up-arrow-new-3");
 
         $("#total-claims-hide-3").toggle();
     });
 
-    
+
     $("#funding-title-4").click(function(){
 
-        $(".hidden-4").toggleClass("show-table-4"); 
+        $(".hidden-4").toggleClass("show-table-4");
 
         $(".down-arrow-4").toggleClass("up-arrow-new-4");
 
@@ -114,7 +114,7 @@ $(document).ready(function(){
 
         $("#funding-title, #funding-title-2").click();
 
-        $(".open-link").hide(); 
+        $(".open-link").hide();
 
         $(".close-link").show();
 
@@ -122,13 +122,13 @@ $(document).ready(function(){
 
     $("#close-all").click(function(){
 
-        $("#funding-title, #funding-title-2").click(); 
+        $("#funding-title, #funding-title-2").click();
 
-        $(".close-link").hide(); 
+        $(".close-link").hide();
 
         $(".open-link").show();
     });
-    
+
 });
 </script>
 
@@ -138,16 +138,16 @@ $(document).ready(function(){
         <div>
             <p>
                 <strong class="phase-tag">BETA</strong>
-                
-                
+
+
             </p>
         </div>
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
     <div class="grid-row ">
         <div class="navigation">
         <ul>
@@ -159,35 +159,35 @@ $(document).ready(function(){
         </ul>
         </div>
     </div>
-    
-    
+
+
 
 
 <div class="grid-row">
     <div class="column-two-thirds">
-        <div>               
-            <h1 class="heading-xlarge">Review your funding claim</h1>      
+        <div>
+            <h1 class="heading-xlarge">Review your funding claim</h1>
         </div>
 
 
                                         <p>This is your Year end (R13) funding claim for 2017 to 2018 Version 1 and is the information you entered on the Hub at 8.25am on 17 September 2018.</p>
 
-                    
-                   
+
+
 <br>
 <p ><a href="public/images/Final funding for 2015 to 2016.pdf">Download document</a></p>
-                    
+
                   <br />  <h2 class="heading-medium">Your claim figures</h2>
 
-                        
-                    
+
+
                     <a href="#" id="close-all" class="close-link float-right" ></a>
                     <a href="#" id="open-all" class="open-link float-right" style="padding-bottom: 20px" ></a>
-                    
+
 
 
                     </p>
-                    
+
                     <div id="funding-title" class="filters-headings-funding margin-bottom"><br />
                         <h2 class="bold-medium">16 to 19 Funding
                             <span class=""></span></h2>
@@ -195,9 +195,9 @@ $(document).ready(function(){
                             <h2 class="bold-small">
                             <span class="down-arrow-funding"></span></h2>
                             <p id="total-claims-hide" class="">Total claim £4,055,981.57</p>
-                        
+
                     </div>
-                                       
+
                         <div class="hidden">
                             <table>
                                 <thead>
@@ -213,10 +213,10 @@ $(document).ready(function(){
                                         <th class=""></th>
                                         <td class="numeric">487</td>
                                     </tr>
-                                    
+
                                 </tbody>
                             </table><br />
-                        
+
                             <table>
                                 <thead>
                                     <tr>
@@ -231,11 +231,7 @@ $(document).ready(function(){
                                         <th class=""></th>
                                         <td class="numeric">923</td>
                                     </tr>
-                                    <tr>
-                                        <td class="column-left">Forecasted delivery</td>
-                                        <th class=""></th>
-                                        <td class="numeric">0</td>
-                                    </tr>
+
                                     <tr>
                                         <td class="column-left">Total delivery for 2017 to 2018</td>
                                         <th class=""></th>
@@ -298,40 +294,40 @@ $(document).ready(function(){
                                 </tbody>
                             </table><br />
 
-                           
+
 
 
                             <table>
-                                
+
                                 <tbody>
                                     <tr>
                                         <td class="column-left"></td>
                                         <th class=""></th>
                                         <td class="numeric"></td>
                                     </tr>
-                                    
+
                                     <tr>
                                         <td class="column-left"><strong>Sub total</strong></td>
                                         <th class=""></th>
                                         <td class="numeric"><strong>£4,090,981.57</strong></td>
                                     </tr>
-                                
+
                                     <tr>
                                         <td class="column-left"></td>
                                         <th class=""></th>
                                         <td class="numeric"></td>
                                     </tr>
-                                    
+
                                     <tr>
                                         <td class="column-left"><strong>Condition of funding removal for 2017 to 2018</strong></td>
                                         <th class=""></th>
                                         <td class="numeric">-£35,000.00</td>
                                     </tr>
                                 </tbody>
-                            
-                                
-                                
-                                    
+
+
+
+
                                     <tr>
                                         <td class="column-left"><strong>Total claim</strong></td>
                                         <th class=""></th>
@@ -340,8 +336,8 @@ $(document).ready(function(){
                                 </tbody>
                             </table>
 
-                        
-                            
+
+
                         </div><br />
 
 
@@ -352,62 +348,62 @@ $(document).ready(function(){
                             <h2 class="bold-small">
                             <span class="down-arrow-funding"></span></h2>
                             <p id="total-claims-hide" class="">Total claim £2,055,000.50</p>
-                        
+
                     </div>
 
-                    
-                                       
-                          
+
+
+
                         <div class="hidden-2">
                             <table>
                                 <thead>
                                     <tr>
                                         <th class="column-left">19 to 23 apprenticeships programme funding</th>
-                                        
+
                                         <th class="numeric">Final year</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="column-left">Your claim</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Exceptional adjustments</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2017 to 2018</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                 </tbody>
                             </table>
-                        
+
                             <table>
                                 <thead>
                                     <tr>
                                         <th class="column-left">19-23 Apprenticeships Learning Support</th>
-                                        
+
                                         <th class="numeric">Final year</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="column-left">Your claim</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Exceptional adjustments</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2016 to 2017</td>
-                                       
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                 </tbody>
@@ -417,19 +413,19 @@ $(document).ready(function(){
                                 <thead>
                                     <tr>
                                         <th class="column-left">24+ Apprenticeships Programme Funding</th>
-                                        
+
                                         <th class="numeric">Final year</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="column-left">Your claim</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2016 to 2017</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                 </tbody>
@@ -439,24 +435,24 @@ $(document).ready(function(){
                                 <thead>
                                     <tr>
                                         <th class="column-left">24+ Apprenticeships Learning Support</th>
-                                        
+
                                         <th class="numeric">Final year</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="column-left">Your claim</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Exceptional adjustments</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2016 to 2017</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                 </tbody>
@@ -466,33 +462,33 @@ $(document).ready(function(){
                                 <thead>
                                     <tr>
                                         <th class="column-left">19+ Apprenticeships Learner Support</th>
-                                        
+
                                         <th class="numeric">Final year</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="column-left">Your claim</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2016 to 2017</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                 </tbody>
                                 <thead>
                                     <tr>
                                         <th class="column-left">Total claim figures</th>
-                                        
+
                                         <th class="numeric">£0</th>
                                     </tr>
                                 </thead>
                             </table>
 
-                            
-                            
+
+
 
                         </div>
 
@@ -503,47 +499,47 @@ $(document).ready(function(){
                             <h2 class="bold-small">
                             <span class="down-arrow-funding"></span></h2>
                             <p id="total-claims-hide" class="">Total claim ££355,900.00</p>
-                        
+
                     </div>
 
-                    
-                                       
-                          
+
+
+
                         <div class="hidden-3">
                             <table>
                                 <thead>
                                     <tr>
                                         <th class="column-left">19 to 23 apprenticeships programme funding</th>
-                                        
+
                                         <th class="numeric">Final year</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="column-left">Your claim</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Exceptional adjustments</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2016 to 2017</td>
-                                        
+
                                         <td class="numeric">£0</td>
                                     </tr>
                                 </tbody>
                                 <thead>
                                     <tr>
                                         <th class="column-left">Total claim figures</th>
-                                        
+
                                         <th class="numeric">£0</th>
                                     </tr>
                                 </thead>
-                            </table>                    
-                            
+                            </table>
+
                         </div>
                     <br />
 
@@ -554,63 +550,63 @@ $(document).ready(function(){
                             <h2 class="bold-small">
                             <span class="down-arrow-funding"></span></h2>
                             <p id="total-claims-hide" class="">Total claim £550,234.30</p>
-                        
+
                     </div>
 
-                    
-                                       
-                          
+
+
+
                         <div class="hidden-3">
                             <table>
                                 <thead>
                                     <tr>
                                         <th class="column-left">19 to 23 apprenticeships programme funding</th>
-                                        
+
                                         <th class="numeric">Final year</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="column-left">Your claim</td>
-                                        
+
                                         <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Exceptional adjustments</td>
-                                        
+
                                         <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2016 to 2017</td>
-                                        
+
                                         <td class="numeric">£99,999.99</td>
                                     </tr>
                                 </tbody>
                                 <thead>
                                     <tr>
                                         <th class="column-left">Total claim figures</th>
-                                        
+
                                         <th class="numeric">£99,999.99</th>
                                     </tr>
                                 </thead>
-                            </table>                    
-                            
+                            </table>
+
                         </div>
                     <br />
-                    
-                                    
+
+
                     <hr>
-                          
-                
+
+
             <p><a href="andrea-authoriser-NEW">Back to funding claims</a></p>
-           
 
 
-            
-                    
-                    
 
-          </div>   
+
+
+
+
+          </div>
 
           <div class="related-container">
         <aside class="related" id="related">
@@ -630,19 +626,19 @@ $(document).ready(function(){
                             <li>
                                 <a href="andrea-authoriser-NEW">Working with the ESFA as a provider</a>
                             </li>
-                            
-                            
+
+
                     </ul>
                 </nav>
             </div>
         </aside>
 
-    </div>              
+    </div>
 
 </div>
-          
-    
-        
+
+
+
 
 </main>
 
