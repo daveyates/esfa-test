@@ -12,6 +12,16 @@
 <script>
 $(document).ready(function(){
 
+$("#next-button").on("click", function() {
+  if($('#radio-1').is(':checked'))
+  {
+    window.location.replace("../pe-public-gov-page/list-right");
+  }
+  else if ($('#radio-2').is(':checked'))
+  {
+    window.location.replace("idams");
+  }
+});
 
 
 
@@ -120,29 +130,48 @@ $(document).ready(function(){
         <div class="column-two-thirds">
 
 
-        <p style"color:red;">Sign in or register for skills and education funding contracts and information online. You can:
+        <p style"color:red;">In this service you can:
 </p>
-            <ul class="list list-bullet">
-                <li>sign documents</li>
-                <li>check your funding allocations</li>
-                <li>view the funding you’ve received</li>
-<li>manage apprenticeship details</li>
-<li>tell us about your subcontractors
-</li>
 
-            </ul>
-            <div class="panel panel-border-wide">
-  <p>
-    You do not have to sign in to <a href="../pe-public-gov-page/list-right">see information on funding for schools and academies.</a>
-</p>
+<fieldset>
+<p>
+
+<div class="multiple-choice">
+  <input id="radio-1" type="radio" name="radio-group" value="view public info">
+  <label for="radio-1">View publically available funding information</label>
 </div>
+
+<div class="multiple-choice">
+  <input id="radio-2" type="radio" name="radio-group" value="login journey">
+  <label for="radio-2">Access your documentation and claims</label>
+</div>
+
+</p>
+</fieldset>
+<p>
+<fieldset>
+</P>
+
+<p>
+<fieldset>
+</P>
+
+
+<div class="transaction">
+    <div id="get-started" class="get-started">
+        <a class="button" href="#" id="next-button">Next</a>
+    </div>
+
+</p>
+
+
+
+</fieldset>
+
+
 <br />
 
-            <div class="transaction">
-                <div id="get-started" class="get-started">
-                    <a class="button button-get-started" href="idams">Sign in or create an account</a>
-                </div>
-            </div>
+
 
 
 
