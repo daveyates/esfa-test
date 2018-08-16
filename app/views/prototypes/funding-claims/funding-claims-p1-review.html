@@ -11,68 +11,21 @@
 
 <script>
 $(document).ready(function(){
-    $("#querySubmit").click(function(){
-
-        $(".hidden").addClass("show"); //to show 'query sent'
-
-        $("details").not(this).removeAttr("open");
-    });
-
-    $("summary").click(function(){
-
-        $(".hidden").removeClass("show"); //to show 'query sent'
-
-    });
-
-
-    $(".show-year-end").click(function(){
-
-        $(".hidden-cell").addClass("show1");
-
-        $(".hidden-year-end").show();
-
-        $(".show-year-end").hide();
-
-    });
-
-
-    $(".hide-year-end").click(function(){
-
-        $(".hidden-cell").removeClass("show1");
-
-        $(".hidden-year-end").hide();
-
-        $(".show-year-end").show();
 
 
 
-    });
-
-    // $("summary").click(function(){
-
-    //     $(".hidden").removeClass("show"); //to show 'query sent'
-
-    // });
-
-
-
-
-    // $(window).scroll(function(){
-    //   if($(window).scrollTop() + 100 > $(window).height() ){
-
-    //     $("#js-back-to-content").show();
-
-    //       }
-    //     else {
-    //         $("#js-back-to-content").hide();
-    //     }
-    // });
 
     $("#funding-title").click(function(){
 
         $(".hidden").toggleClass("show-table");
 
         $(".down-arrow-funding").toggleClass("up-arrow-funding");
+
+
+        if (".down-arrow-funding")
+        {
+            $("#open-all").text("Close all");
+        }
 
         $("#total-claims-hide").toggle();
 
@@ -85,7 +38,18 @@ $(document).ready(function(){
 
         $(".down-arrow-2").toggleClass("up-arrow-new-2");
 
+
+        if (".down-arrow-2")
+        {
+            $("#open-all").text("Close all");
+        }
+
+        else {
+            $("#open-all").text("Open all");
+        }
+
         $("#total-claims-hide-2").toggle();
+
     });
 
 
@@ -95,41 +59,33 @@ $(document).ready(function(){
 
         $(".down-arrow-3").toggleClass("up-arrow-new-3");
 
+
+        if (".down-arrow-3")
+        {
+            $("#open-all").text("Close all");
+        }
+
+        else {
+            $("#open-all").text("Open all");
+        }
+
         $("#total-claims-hide-3").toggle();
     });
 
 
-    $("#funding-title-4").click(function(){
-
-        $(".hidden-4").toggleClass("show-table-4");
-
-        $(".down-arrow-4").toggleClass("up-arrow-new-4");
-
-        $("#total-claims-hide-4").toggle();
-    });
-
-
-
     $("#open-all").click(function(){
 
-        $("#funding-title, #funding-title-2").click();
+        $("#funding-title, #funding-title-2, #funding-title-3").click();
 
-        $(".open-link").hide();
-
-        $(".close-link").show();
+        $("#open-all").text("Close all");
 
     });
 
-    $("#close-all").click(function(){
 
-        $("#funding-title, #funding-title-2").click();
-
-        $(".close-link").hide();
-
-        $(".open-link").show();
-    });
 
 });
+
+
 </script>
 
 <main role="main" id="content" >
@@ -152,10 +108,7 @@ $(document).ready(function(){
         <div class="navigation">
         <ul>
             <li><a class="font-xsmall" href="dashboard">Home</a></li>
-            <li><a class="font-xsmall active" href="andrea-authoriser">Contracts</a></li>
-            <li><a class="font-xsmall" href="andrea-authoriser-NEW">Funding claims</a></li>
-            <li><a class="font-xsmall" href="settings">Settings</a></li>
-            <li><a class="font-xsmall" href="/">Sign out</a></li>
+
         </ul>
         </div>
     </div>
@@ -166,175 +119,408 @@ $(document).ready(function(){
 <div class="grid-row">
     <div class="column-two-thirds">
         <div>
-            <h1 class="heading-xlarge">Review your funding claim</h1>
+            <h1 class="heading-xlarge">Year end (R13) funding claim year for 2017 to 2018</h1>
         </div>
 
 
-                                        <p>This is your Year end (R13) funding claim for 2017 to 2018 Version 1 and is the information you entered on the Hub at 8.25am on 17 September 2018.</p>
+
+        <p>This is your Year end (R13) funding claim for 2017 to 2018 Version 1 and is the information you entered on the Hub at 8.25am on 17 September 2018.</p>
 
 
 
-<br>
+
 <p ><a href="public/images/Final funding for 2015 to 2016.pdf">Download document</a></p>
 
-                  <br />  <h2 class="heading-medium">Your claim figures</h2>
+<br />  <h2 class="heading-medium">Your claim figures</h2>
 
 
 
-                    <a href="#" id="close-all" class="close-link float-right" ></a>
-                    <a href="#" id="open-all" class="open-link float-right" style="padding-bottom: 20px" ></a>
+
+
+                    <a href="#" id="open-all" class="open-link float-right"></a>
 
 
 
                     </p>
-
                     <div id="funding-title" class="filters-headings-funding margin-bottom"><br />
-                        <h2 class="bold-medium">16 to 19 Funding
-                            <span class=""></span></h2>
+                      <h2 class="bold-medium">16 to 19 Funding
+                          <span class=""></span></h2>
 
-                            <h2 class="bold-small">
-                            <span class="down-arrow-funding"></span></h2>
-                            <p id="total-claims-hide" class="">Total claim £4,055,981.57</p>
+                          <h2 class="bold-small">
+                          <span class="down-arrow-funding"></span></h2>
+                          <p id="total-claims-hide" class="">Total claim £4,055,981.57</p>
 
-                    </div>
+                  </div>
 
-                        <div class="hidden">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th class="column-left">14 to 16 direct funded students</th>
-                                        <th class="column-left"></th>
-                                        <th class="numeric"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="column-left">Student Numbers</td>
-                                        <th class=""></th>
-                                        <td class="numeric">487</td>
-                                    </tr>
+                      <div class="hidden">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="column-left" width="90%">14 to 16 direct funded students</th>
+                                    <th class=""></th>
+                                    <th class=""></th>
+                                    <th class="Quantity" width="10%">Numbers</th>
 
-                                </tbody>
-                            </table><br />
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                  <td class="column-left" width="90%">Band 5 students</td>
+                                  <th class=""></th>
+                                  <th class=""></th>
+                                  <td class="middle" width="10%">67</td>
 
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th class="column-left">16 to 19 students - including High Needs</th>
-                                        <th class=""></th>
-                                        <th class="numeric">Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="column-left">Student numbers</td>
-                                        <th class=""></th>
-                                        <td class="numeric">923</td>
-                                    </tr>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="90%">Band 4a students</td>
+                                  <th class=""></th><th class=""></th>
+                                  <td class="middle" width="10%">34</td>
 
-                                    <tr>
-                                        <td class="column-left">Total delivery for 2017 to 2018</td>
-                                        <th class=""></th>
-                                        <td class="numeric">£3,857,889.18</td>
-                                    </tr>
-                                </tbody>
-                            </table><br />
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="90%">Band 4b students</td>
+                                  <th class=""></th>
+                                  <th class=""></th>
+                                  <td class="middle" width="10%">102</td>
 
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th class="column-left">19 to 24 students with an Education Health and Care Plan</th>
-                                        <th class=""></th>
-                                        <th class="numeric">Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="column-left">Student numbers</td>
-                                        <th class=""></th>
-                                        <td class="numeric">52</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="column-left">Forecasted delivery</td>
-                                        <th class=""></th>
-                                        <td class="numeric">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="column-left">Total delivery for 2017 to 2018</td>
-                                        <th class=""></th>
-                                        <td class="numeric">£233,092.39</td>
-                                    </tr>
-                                </tbody>
-                            </table><br />
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="90%">Band 3 students</td>
+                                  <th class=""></th>
+                                  <th class=""></th>
+                                  <td class="middle" width="10%">69</td>
 
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th class="column-left">19+ continuing students excluding those with an Education Health and Care Plan</th>
-                                        <th class="numeric"></th>
-                                        <th class="numeric">Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="column-left">Student numbers</td>
-                                        <th class=""></th>
-                                        <td class="numeric">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="column-left">Forecasted delivery</td>
-                                        <th class=""></th>
-                                        <td class="numeric">0</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="column-left">Total delivery for 2017 to 2018</td>
-                                        <th class=""></th>
-                                        <td class="numeric">0</td>
-                                    </tr>
-                                </tbody>
-                            </table><br />
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="90%">Band 2 students</td>
+                                  <th class=""></th>
+                                  <th class=""></th>
+                                  <td class="middle" width="10%">92</td>
 
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="90%">Band 1 students</td>
+                                  <th class=""></th>
+                                  <th class=""></th>
+                                  <td class="middle" width="10%">123</td>
 
+                              </tr>
+                                <tr>
+                                    <td class="column-left" width="90%">All students</td>
+                                    <th class=""></th>
+                                    <th class=""></th>
+                                    <td class="middle" width="10%">487</td>
 
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="90%">Exceptional adjustments</td>
+                                    <th class=""></th>
+                                    <th class=""></th>
+                                    <td class="middle" width="10%">0</td>
 
-                            <table>
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="90%">Total delivery for 2017 to 2018</td>
+                                    <th class=""></th>
+                                    <th class=""></th>
+                                    <td class="middle" width="10%">487</td>
 
-                                <tbody>
-                                    <tr>
-                                        <td class="column-left"></td>
-                                        <th class=""></th>
-                                        <td class="numeric"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="column-left"><strong>Sub total</strong></td>
-                                        <th class=""></th>
-                                        <td class="numeric"><strong>£4,090,981.57</strong></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="column-left"></td>
-                                        <th class=""></th>
-                                        <td class="numeric"></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="column-left"><strong>Condition of funding removal for 2017 to 2018</strong></td>
-                                        <th class=""></th>
-                                        <td class="numeric">-£35,000.00</td>
-                                    </tr>
-                                </tbody>
-
-
-
-
-                                    <tr>
-                                        <td class="column-left"><strong>Total claim</strong></td>
-                                        <th class=""></th>
-                                        <td class="numeric"><strong>£4,055,981.57</strong></td>
-                                    </tr>
-                                </tbody>
+                                </tr>
+                            </tbody>
                             </table>
+
+                        </table><p><a href="#fundinganchor">16 to 19 funding categories</a></p><br />
+
+
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="column-left" width="50%">16 to 19 students - including High Needs</th>
+                                    <th class=""></th>
+                                    <th class="Quantity" width="10%">Numbers</th>
+                                    <th class="numeric" width="40%">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                  <td class="column-left" width="50%">Band 5 students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="10%">570</td>
+                                  <td class="numeric" width="40%">£2,589,915.14</td>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="60%">Band 4a students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="20%">40</td>
+                                  <td class="numeric" width="25%">£149,942.47</td>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="60%">Band 4b students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="20%">107</td>
+                                  <td class="numeric" width="25%">£401,096.11</td>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="60%">Band 3 students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="20%">55</td>
+                                  <td class="numeric" width="25%">£168,685.28</td>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="60%">Band 2 students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="20%">65</td>
+                                  <td class="numeric" width="25%">£157,490.71</td>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="60%">Band 1 students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="20%">86</td>
+                                  <td class="numeric" width="25%">£390,759.17</td>
+                              </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">All students</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">923</td>
+                                    <td class="numeric" width="25%">£3,875,889.17</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">Exceptional adjustments</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">0</td>
+                                    <td class="numeric" width="25%">£0</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">Total delivery for 2017 to 2018</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">923</td>
+                                    <td class="numeric" width="25%">£3,875,889.17</td>
+                                </tr>
+                            </tbody>
+                        </table><p><a href="#fundinganchor">16 to 19 funding categories</a></p><br />
+
+
+
+
+
+
+
+
+                              </tbody>
+
+
+                          </table><br />
+
+                          <table>
+                              <thead>
+                                  <tr>
+                                      <th class="column-left" width="50%">19 to 24 students with an Education Health and Care Plan</th>
+                                      <th class=""></th>
+                                      <th class="Quantity" width="10%">Numbers</th>
+                                      <th class="numeric" width="40%">Amount</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td class="column-left" width="50%">Band 5 students</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="10%">48</td>
+                                    <td class="numeric" width="40%">£218,098.14</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">Band 4a students</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">0</td>
+                                    <td class="numeric" width="25%">£0</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">Band 4b students</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">4</td>
+                                    <td class="numeric" width="25%">£14,994.25</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">Band 3 students</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">0</td>
+                                    <td class="numeric" width="25%">£0</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">Band 2 students</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">0</td>
+                                    <td class="numeric" width="25%">£0</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">Band 1 students</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">0</td>
+                                    <td class="numeric" width="25%">£0</td>
+                                </tr>
+                                  <tr>
+                                      <td class="column-left" width="60%">All students</td>
+                                      <th class=""></th>
+                                      <td class="middle" width="20%">52</td>
+                                      <td class="numeric" width="25%">£233,092.39</td>
+                                  </tr>
+                                  <tr>
+                                      <td class="column-left" width="60%">Exceptional adjustments</td>
+                                      <th class=""></th>
+                                      <td class="middle" width="20%">0</td>
+                                      <td class="numeric" width="25%">£0</td>
+                                  </tr>
+                                  <tr>
+                                      <td class="column-left" width="60%">Total delivery for 2017 to 2018</td>
+                                      <th class=""></th>
+                                      <td class="middle" width="20%">52</td>
+                                      <td class="numeric" width="25%">£233,092.39</td>
+                                  </tr>
+                              </tbody>
+                          </table><p><a href="#fundinganchor">16 to 19 funding categories</a></p><br />
+
+                          <table>
+                            <thead>
+                                <tr>
+                                    <th class="column-left" width="50%">19+ continuing students excluding those with an Education Health and Care Plan</th>
+                                    <th class=""></th>
+                                    <th class="Quantity" width="10%">Numbers</th>
+                                    <th class="numeric" width="40%">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                  <td class="column-left" width="50%">Band 5 students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="10%">0</td>
+                                  <td class="numeric" width="40%">£0</td>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="60%">Band 4a students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="20%">0</td>
+                                  <td class="numeric" width="25%">£0</td>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="60%">Band 4b students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="20%">0</td>
+                                  <td class="numeric" width="25%">£0</td>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="60%">Band 3 students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="20%">0</td>
+                                  <td class="numeric" width="25%">£0</td>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="60%">Band 2 students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="20%">0</td>
+                                  <td class="numeric" width="25%">£0</td>
+                              </tr>
+                              <tr>
+                                  <td class="column-left" width="60%">Band 1 students</td>
+                                  <th class=""></th>
+                                  <td class="middle" width="20%">0</td>
+                                  <td class="numeric" width="25%">£0</td>
+                              </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">All students</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">0</td>
+                                    <td class="numeric" width="25%">£0</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">Exceptional adjustments</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">0</td>
+                                    <td class="numeric" width="25%">£0</td>
+                                </tr>
+                                <tr>
+                                    <td class="column-left" width="60%">Total delivery for 2017 to 2018</td>
+                                    <th class=""></th>
+                                    <td class="middle" width="20%">0</td>
+                                    <td class="numeric" width="25%">£0</td>
+                                </tr>
+                            </tbody>
+                        </table><p><a href="#fundinganchor">16 to 19 funding categories</a></p><br />
+
+
+
+                          <table>
+
+                              <tbody>
+                                  <tr>
+                                      <td class="column-left"></td>
+                                      <th class=""></th>
+                                      <td class="numeric"></td>
+                                  </tr>
+
+                                  <tr>
+                                      <td class="column-left"><strong>Sub total</strong></td>
+                                      <th class=""></th>
+                                      <td class="numeric"><strong>£4,090,981.57</strong></td>
+                                  </tr>
+
+
+                              </tbody>
+                              <tbody>
+
+
+                                  <tr>
+                                      <td class="column-left"><strong>Condition of funding removal for 2017 to 2018</strong></td>
+                                      <th class=""></th>
+                                      <td class="numeric">-£35,000.00</td>
+                                  </tr>
+                              </tbody>
+
+
+                              <tbody>
+
+
+                                  <tr>
+                                      <td class="column-left"><strong>Total claim</strong></td>
+                                      <th class=""></th>
+                                      <td class="numeric"><strong>£4,055,981.57</strong></td>
+                                  </tr>
+                                  <tr></tr>
+                              </tbody>
+
+                          </table><br />
+                          <table><thead><tr>
+                            <div class="panel-border-wide panel">
+
+                          <a name="fundinganchor"></a>
+
+                                      <strong>16 to 19 funding categories
+                                      </strong><p></p>
+                                      <p><strong>Band 5</strong> (540+ hours)<br />
+                                      16 and 17 year olds and students aged 18 and over with high needs
+                                      <br />National rate: £4,000</p>
+
+                                      <p><strong>Band 4a</strong> (450+ hours)<br />
+                                      18 and 19 year olds who are not high needs
+                                      <br />National rate: £3,300</p>
+
+                                      <p><strong>Band 4b</strong> (450 to 539 hours)<br />
+                                      16 and 17 year olds and students aged 18 and over with high needs
+                                      <br />National rate: £3,300</p>
+
+                                      <p><strong>Band 3</strong> (360 to 449 hours)<br />
+                                      All students
+                                      <br />National rate: £2,700</p>
+
+                                      <p><strong>Band 2</strong> (280 to 359 hours)<br />
+                                      All students
+                                      <br />National rate: £2,133</p>
+
+                                      <p><strong>Band 1</strong> (up to 279 hours)<br />
+                                      All students - An FTE figure is multiplied by the national rate for Band 1
+                                      <br />National rate: £4,000</p>
+
+        </div>
+      </tr></thead></table>
 
 
 
@@ -367,17 +553,17 @@ $(document).ready(function(){
                                     <tr>
                                         <td class="column-left">Your claim</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Exceptional adjustments</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2017 to 2018</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -394,17 +580,17 @@ $(document).ready(function(){
                                     <tr>
                                         <td class="column-left">Your claim</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Exceptional adjustments</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
-                                        <td class="column-left">Total delivery for 2016 to 2017</td>
+                                        <td class="column-left">Total delivery for 201 to 2017</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -421,12 +607,12 @@ $(document).ready(function(){
                                     <tr>
                                         <td class="column-left">Your claim</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2016 to 2017</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -443,17 +629,17 @@ $(document).ready(function(){
                                     <tr>
                                         <td class="column-left">Your claim</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Exceptional adjustments</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2016 to 2017</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -470,19 +656,19 @@ $(document).ready(function(){
                                     <tr>
                                         <td class="column-left">Your claim</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2016 to 2017</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                 </tbody>
                                 <thead>
                                     <tr>
                                         <th class="column-left">Total claim figures</th>
 
-                                        <th class="numeric">£0</th>
+                                        <th class="numeric">£99,999.99</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -498,7 +684,7 @@ $(document).ready(function(){
 
                             <h2 class="bold-small">
                             <span class="down-arrow-funding"></span></h2>
-                            <p id="total-claims-hide" class="">Total claim ££355,900.00</p>
+                            <p id="total-claims-hide" class="">Total claim £355,900.00</p>
 
                     </div>
 
@@ -518,24 +704,24 @@ $(document).ready(function(){
                                     <tr>
                                         <td class="column-left">Your claim</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Exceptional adjustments</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                     <tr>
                                         <td class="column-left">Total delivery for 2016 to 2017</td>
 
-                                        <td class="numeric">£0</td>
+                                        <td class="numeric">£99,999.99</td>
                                     </tr>
                                 </tbody>
                                 <thead>
                                     <tr>
                                         <th class="column-left">Total claim figures</th>
 
-                                        <th class="numeric">£0</th>
+                                        <th class="numeric">£99,999.99</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -592,17 +778,8 @@ $(document).ready(function(){
                             </table>
 
                         </div>
-                    <br />
-
 
                     <hr>
-
-
-            <p><a href="andrea-authoriser-NEW">Back to funding claims</a></p>
-
-
-
-
 
 
 
@@ -634,6 +811,24 @@ $(document).ready(function(){
         </aside>
 
     </div>
+
+</div>
+
+
+
+
+
+
+<br />
+                <p><a href="andrea-authoriser-NEW"> Back to funding claims</a></p>
+
+
+
+
+
+
+          </div>
+
 
 </div>
 

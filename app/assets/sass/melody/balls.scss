@@ -308,7 +308,7 @@ strong{
 
 
 
-   
+
 
 
 
@@ -577,7 +577,7 @@ html[data-useragent*='MSIE 10.0'] .flex-container {
 
 .card a {
   display: inline-block;
-  
+
   line-height: 20px;
   text-decoration: none;
 }
@@ -776,15 +776,15 @@ html[data-useragent*='MSIE 10.0'] .flex-container {
     }
     .previous {
         text-align: left
-    }    
+    }
     .next {
         text-align: right;
         .arrow-button {
             float: right;
             margin-left: 10px;
             margin-right: 0
-        }            
-    }    
+        }
+    }
 }
 
 // To sit multiple choice inputs next to each other, use .inline on parent
@@ -804,3 +804,14 @@ html[data-useragent*='MSIE 10.0'] .flex-container {
 }
 
 .upload-layout .multiple-choice {float:right;     padding: 18px 10px 9px 26px;}
+
+
+// Bits added by Dave
+
+hr.style1{
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #b9b9b9; /* old IE */
+    background-color: #b9b9b9; /* Modern Browsers */
+}
