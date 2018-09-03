@@ -249,7 +249,25 @@
                     $(this).nextAll('.accordion-content:first').toggle();
                 });
 
+            $("form").submit(function(e) {
+              var laeStabSearch = $('#laeStabSearch').val().toLowerCase();
+              var localAuthoritySearch = $('#localAuthoritySearch').val().toLowerCase();
 
+              if (laeStabSearch.indexOf("shirland") > -1) {
+                  window.location = 'shirland-primary.html';
+              }
+
+              if (laeStabSearch.indexOf("st joseph") > -1) {
+                  window.location = 'st-josephs-search.html';
+              }
+
+              if (localAuthoritySearch.indexOf("derby") > -1) {
+                  window.location = 'derbyshire.html';
+              }
+
+              e.preventDefault();
+              e.stopPropagation();
+            });
 
 
         });
