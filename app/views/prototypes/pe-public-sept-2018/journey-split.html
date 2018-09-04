@@ -114,7 +114,7 @@
     <div id="global-breadcrumb" class="breadcrumbs">
         <nav>
             <ol>
-              <li><a href="#">Home</a></li>
+              <li><a href="../skills-funding-service/start.html">Skills funding service</a></li>
               <li><a href="find-org.html">Find an organisation</a></li>
               <li>PE and sport premium alloctions</li>
             </ol>
@@ -142,7 +142,7 @@
                     <div class="accordion-content inner">
                         <p class="form-hint" style="color:gray; font-size:16px;">For example, Lickhill Primary School or 3832470</p>
                         <div class="search-block">
-                            <input class="text-box" autofocus="autofocus"id="laeStabSearch" name="laeStabSearch" type="text" value="" /> <input type="submit" value="10" name="search" class="search-input" autofocus="autofocus" />
+                            <input class="text-box" id="laeStabSearch" name="laeStabSearch" type="text" value="" /> <input type="submit" value="10" name="search" class="search-input" />
                         </div>
                     </div>
                 </div>
@@ -243,15 +243,26 @@
         $(document).ready(function() {
             reset();
 
+            var laeStabSearchEle = $('#laeStabSearch');
+            var localAuthoritySearchEle = $('#localAuthoritySearch');
+
             $(".toggle").on("click",
-                function() {
+                function(e) {
+                  if (e.target.className.indexOf('schoolCheckbox') > -1) {
+                    setTimeout(function() { laeStabSearchEle.focus(); }, 25);
+                  }
+                  else {
+                    setTimeout(function() { localAuthoritySearchEle.focus(); }, 25);
+                  }
+
                     $(".accordion-content").hide();
                     $(this).nextAll('.accordion-content:first').toggle();
                 });
 
             $("form").submit(function(e){
-              var laeStabSearch = $('#laeStabSearch').val().toLowerCase();
-              var localAuthoritySearch = $('#localAuthoritySearch').val().toLowerCase();
+
+              var laeStabSearch = laeStabSearchEle.val().toLowerCase();
+              var localAuthoritySearch = localAuthoritySearchEle.val().toLowerCase();
 
               if (laeStabSearch.indexOf("shirland") > -1) {
                   window.location = 'shirland-primary.html';
