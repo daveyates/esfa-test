@@ -142,7 +142,7 @@
                     <div class="accordion-content inner">
                         <p class="form-hint" style="color:gray; font-size:16px;">For example, Lickhill Primary School or 3832470</p>
                         <div class="search-block">
-                            <input class="text-box" id="laeStabSearch" name="laeStabSearch" type="text" value="" /> <input type="submit" value="10" name="search" class="search-input"/>
+                            <input class="text-box" autofocus="autofocus"id="laeStabSearch" name="laeStabSearch" type="text" value="" /> <input type="submit" value="10" name="search" class="search-input" autofocus="autofocus" />
                         </div>
                     </div>
                 </div>
@@ -249,7 +249,7 @@
                     $(this).nextAll('.accordion-content:first').toggle();
                 });
 
-            $("form").submit(function(e) {
+            $("form").submit(function(e){
               var laeStabSearch = $('#laeStabSearch').val().toLowerCase();
               var localAuthoritySearch = $('#localAuthoritySearch').val().toLowerCase();
 
