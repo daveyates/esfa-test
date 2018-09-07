@@ -707,12 +707,23 @@ html[data-useragent*='MSIE 10.0'] .flex-container {
     left: 0;
   }
 
+  [type=smallcheckbox] + label::before {
+    content: "";
+    border: 2px solid;
+    background: transparent;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   [type=checkbox] + label::after {
     content: "";
     border: solid;
     border-width: 0 0 5px 5px;
     background: transparent;
-    width: 17px;
+    width: 107px;
     height: 7px;
     position: absolute;
     top: 10px;
