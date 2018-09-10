@@ -8,6 +8,8 @@
 <html lang="en">
 <!--<![endif]-->
 
+
+
 <head>
 
 
@@ -49,6 +51,30 @@
   #element1 {float:left;}
   #element2 {float:right;}
   </style>
+
+  <style>
+    .multiple-choice [type=checkbox] + label::before
+    {
+    	width: 12px;
+    	height: 12px;
+    	box-sizing: initial;
+    }
+
+    .multiple-choice [type=checkbox] + label::after {
+    	width: 8px;
+    	height: 3px;
+    	border-width: 0 0 2px 2px;
+    	top: 5px;
+    	left: 3px;
+    	box-sizing: initial;
+    }
+
+    .multiple-choice {
+    	padding: 0 0 0 30px;
+    }
+    </style>
+
+
 </head>
 <a name="top"></a>
 <body>
