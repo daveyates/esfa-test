@@ -38,27 +38,27 @@
     <link href='https://sfs.doat.skillsfunding.service.gov.uk/Content/govuk/cssScreen?v=o3sqeToci6jwIml_KBt6eMbcCCNq_k0LCGzZa5-uEQg1' rel='stylesheet' type='text/css' media='screen'/>
 
     <!--<![endif]-->
-    <style>
-      .multiple-choice [type=checkbox] + label::before
-      {
-      	width: 12px;
-      	height: 12px;
-      	box-sizing: initial;
-      }
+  <style>
+    .multiple-choice [type=checkbox] + label::before
+    {
+    	width: 12px;
+    	height: 12px;
+    	box-sizing: initial;
+    }
 
-      .multiple-choice [type=checkbox] + label::after {
-      	width: 8px;
-      	height: 3px;
-      	border-width: 0 0 2px 2px;
-      	top: 5px;
-      	left: 3px;
-      	box-sizing: initial;
-      }
+    .multiple-choice [type=checkbox] + label::after {
+    	width: 8px;
+    	height: 3px;
+    	border-width: 0 0 2px 2px;
+    	top: 5px;
+    	left: 3px;
+    	box-sizing: initial;
+    }
 
-      .multiple-choice {
-      	padding: 0 0 0 30px;
-      }
-      </style>
+    .multiple-choice {
+    	padding: 0 0 0 30px;
+    }
+    </style>
 
 </head>
 <body>
@@ -133,14 +133,14 @@
         <div class="grid-row">
             <div class="column-full">
               <div id="global-breadcrumb" class="breadcrumbs">
-                <nav>
-                  <ol>
-                    <li><a href="../skills-funding-service/start.html">Skills funding service</a></li>
-                    <li><a href="find-org.html">PE and sport premium allocations</a></li>
-                    <li><a href="journey-split.html">Find an organisation</a></li>
-                    <li>Did you mean</li>
-                  </ol>
-                </nav>
+                  <nav>
+                    <ol>
+                      <li><a href="../skills-funding-service/start.html">Skills funding service</a></li>
+                      <li><a href="find-org.html">PE and sport premium allocations</a></li>
+                      <li><a href="journey-split.html">Find an organisation</a></li>
+                      <li>Did you mean</li>
+                    </ol>
+                  </nav>
               </div>
 
 
@@ -167,11 +167,11 @@
                 <h3 id="establishmenttype" class="filters-headings heading-small">Establishment type</h3>
             </header>
             <div class="js-filter-collapsible-content">
-                <section class="toggled-adult-funding-content" style="height:120px;">
+                <section class="toggled-adult-funding-content">
                     <ul>
                       <li class="multiple-choice">
-                          <input id="QueryFilter.Filters.Academy" name="QueryFilter.Filters.SchoolType" type="checkbox" value="Academy" checked />
-                          <label class="block" for="QueryFilter.Filters.Academy">
+                          <input id="QueryFilterFiltersAcademy" name="QueryFilter.Filters.SchoolType" type="checkbox" value="Academy"  />
+                          <label class="block" for="QueryFilterFiltersAcademy">
 
                               Academies
                           </label>
@@ -210,7 +210,7 @@
                 <h3 id="localauthority" class="filters-headings heading-small">Local authority</h3>
             </header>
             <div class="js-filter-collapsible-content">
-                <section class="toggled-adult-funding-content" style="height:185px; overflow:auto;">
+                <section class="toggled-adult-funding-content">
                     <ul>
                       <li class="multiple-choice">
           <input type="checkbox"/>
@@ -802,13 +802,14 @@ Worcestershire
         </section>
 </form></div>    <div id="multiple-schools" class="column-two-thirds">
 
-        <h2 class="search-results-title">Search results for &#39;<span class="bold-medium">St Josephs</span>&#39;</span></h2>
+        <h2 class="search-results-title">Search results for &#39;<span class="bold-medium">St Josephs</span>&#39;
 
-            <h3><p>We found 1 school. Did you mean:</p> </h3>
+            <h3><p>We found 3 schools. Did you mean:</p> </h3>
             <ul>
 
-
-                        <li><a href="st-josephs.html">St Joseph&#39;s Catholic Primary School, Rotherham, S60 1GB</a></li>
+                        <li><a href="#">Our Lady and St Joseph&#39;s Catholic Primary School, Rotherham, S60 7YT</a></li>
+                        <li><a href="#">St Joseph&#39;s Catholic Primary School, Rotherham, S60 4PJ</a></li>
+                        <li><a href="st-josephs">St Joseph&#39;s Catholic Primary School, Rotherham, S60 1GB</a></li>
                       </ul>
     </div>
 </form></div>
@@ -871,7 +872,16 @@ Worcestershire
 
 
     <!--<![endif]-->
+    <script>
+    $(document).ready(function(){
+    $("#QueryFilterFiltersAcademy").click(function(e){
+    window.location="st-josephs-search-rotherham-academy.html"
 
+    })
+
+    })
+
+    </script>
 
 </body>
 </html>
