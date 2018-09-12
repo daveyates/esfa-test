@@ -62,6 +62,42 @@
 }
 </style>
 
+<!-- search box thing -->
+
+
+<style>
+.filter-search {
+    background-color: transparent;
+    border: 0 !important;
+    border-bottom: #0b0c0c 1px solid !important;
+    width: 120% !important;
+    font-size: 16px;
+}
+
+.search-field-wrap {
+    background-color: #dee0e2;
+}
+
+.search-field-wrap .filter-searchwithin-label {
+    background: transparent url(https://get-information-schools.service.gov.uk/public/assets/images/icons/icon-mag-glass.png) no-repeat 12px center;
+    background-size: 15px;
+    padding-left: 30px;
+    width: calc(100% - 60px);
+    display: block;
+    position: relative;
+    padding-bottom: 6px;
+
+
+}
+
+.visually-hidden, .visuallyhidden {
+    position: absolute;
+    left: -9999em;
+}
+
+</style>
+
+<!-- end search box thing -->
 
 
 </head>
@@ -160,65 +196,32 @@
             <br />
             <div class="search-hidden-mobile">
                 <ul>
-                        <li>
 
-<fieldset class="filter">
-    <legend class="visuallyhidden">establishment type</legend>
-    <div class="js-filter-collapsible-collections SchoolTypeFilter">
-        <section class="js-filter-collapsible">
-            <input type="hidden" name="QueryFilter.Filters.Open.SchoolType" id="QueryFilter.Filters.Open.SchoolType" value="True" />
-            <header>
-                <h3 id="establishmenttype" class="filters-headings heading-small">Establishment type</h3>
-            </header>
-            <div class="js-filter-collapsible-content">
-                <section class="toggled-adult-funding-content" style="height:120px;">
-                    <ul>
-                      <li class="multiple-choice">
-                          <input id="QueryFilter.Filters.Academy" name="QueryFilter.Filters.SchoolType" type="checkbox" value="Academy"  />
-                          <label class="block" for="QueryFilter.Filters.Academy">
-
-                              Academies (102)
-                          </label>
-                      </li>
-
-
-
-
-                            <li class="multiple-choice">
-                                <input id="QueryFilter.Filters.Maintained" name="QueryFilter.Filters.SchoolType" type="checkbox"  value="Maintained"  />
-                                <label class="block" for="QueryFilter.Filters.Maintained">
-
-                                    Maintained schools (47)
-
-
-
-
-                                </label>
-                            </li>
-
-                            <li class="multiple-choice">
-                                <input id="QueryFilter.Filters.Special" name="QueryFilter.Filters.SchoolType" type="checkbox" value="Special"  />
-                                <label class="block" for="QueryFilter.Filters.Special">
-
-                                    Non-maintained special schools (36)
-                                </label>
-                            </li>
-                    </ul>
-                </section>
-            </div>
-        </section>
-    </div>
-</fieldset>
-                        </li>
                         <li>
 
 <fieldset class="filter">
     <legend class="visuallyhidden">local authority</legend>
     <div class="js-filter-collapsible-collections RegionFilter">
-        <section class="js-filter-collapsible">
+        <section class="js-filter">
             <input type="hidden" name="QueryFilter.Filters.Open.Region" id="QueryFilter.Filters.Open.Region" value="True" />
             <header>
                 <h3 id="localauthority" class="filters-headings heading-small">Local authority</h3>
+
+
+<!-- start search box thing-->
+
+                <div class="search-field-wrap">
+                        <label class="filter-searchwithin-label">
+                            <span class="visually-hidden">Search</span>
+                            <input type="text" class="filter-search">
+                            <button class="field-clear hidden"><span class="visually-hidden">Clear</span></button>
+                        </label>
+                    </div>
+
+<!-- end search box thing-->
+
+
+
             </header>
             <div class="js-filter-collapsible-content">
                 <section class="toggled-adult-funding-content" style="height:185px; overflow:auto;">
@@ -807,6 +810,57 @@ Worcestershire
     </div>
 </fieldset>
                         </li>
+                        <li>
+
+                        <fieldset class="filter">
+                        <legend class="visuallyhidden">establishment type</legend>
+                        <div class="js-filter-collapsible-collections SchoolTypeFilter">
+                        <section class="js-filter-collapsible">
+                        <input type="hidden" name="QueryFilter.Filters.Open.SchoolType" id="QueryFilter.Filters.Open.SchoolType" value="True" />
+                        <header>
+                        <h3 id="establishmenttype" class="filters-headings heading-small">Establishment type</h3>
+                        </header>
+                        <div class="js-filter-collapsible-content">
+                        <section class="toggled-adult-funding-content" style="height:120px;">
+                        <ul>
+                        <li class="multiple-choice">
+                          <input id="QueryFilter.Filters.Academy" name="QueryFilter.Filters.SchoolType" type="checkbox" value="Academy"  />
+                          <label class="block" for="QueryFilter.Filters.Academy">
+
+                              Academies
+                          </label>
+                        </li>
+
+
+
+
+                            <li class="multiple-choice">
+                                <input id="QueryFilter.Filters.Maintained" name="QueryFilter.Filters.SchoolType" type="checkbox"  value="Maintained"  />
+                                <label class="block" for="QueryFilter.Filters.Maintained">
+
+                                    Maintained schools
+
+
+
+
+                                </label>
+                            </li>
+
+                            <li class="multiple-choice">
+                                <input id="QueryFilter.Filters.Special" name="QueryFilter.Filters.SchoolType" type="checkbox" value="Special"  />
+                                <label class="block" for="QueryFilter.Filters.Special">
+
+                                    Non-maintained special schools
+                                </label>
+                            </li>
+                        </ul>
+                        </section>
+                        </div>
+                        </section>
+                        </div>
+                        </fieldset>
+                        </li>
+
                 </ul>
 
             </div>
